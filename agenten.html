@@ -7,7 +7,7 @@
 <title>Agenten · Bob</title>
 <meta name="description" content="Individuell gebaute KI-Agenten für Ihr Unternehmen. Drei Wirkungsbereiche: Eingang verarbeiten, prüfen und abgleichen, Termine überwachen. Dazu Antworten auf die häufigsten Fragen.">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="site.css?v=202610261427">
+<link rel="stylesheet" href="site.css?v=202610261435">
 
 </head>
 <body>
@@ -138,7 +138,28 @@
 <div class="mock-foot"><span>Rückfrage an Stahl Peters liegt bereit</span><span class="dm-btn ok">Freigeben</span></div></div></div>
   </article>
 </div>
-<div class="roles-cta"><p>Drei Bereiche von vielen. Welcher Vorgang ist es bei Ihnen?</p><a class="btn arrow" href="index.html#kontakt">Erstgespräch anfragen</a></div>
+</div></section>
+<section id="bauen"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Ihr Bob</span><h2>Wir bauen Ihren Agenten. Nur für Sie.</h2><p class="lede">Die Beispiele zeigen, was geht. Ihr Bob entsteht aus Ihren Vorgängen: Wir bauen ihn gemeinsam mit Ihrem Team, zugeschnitten auf Ihre Abläufe, Systeme und Regeln.</p></div>
+  <div class="bld">
+    <div class="bld-copy">
+      <span class="bld-k">Was wir für Sie zuschneiden</span>
+      <ol class="bld-list">
+        <li><b>Ihr Vorgang</b><span>So, wie er bei Ihnen wirklich läuft, mit allen Sonderfällen.</span></li>
+        <li><b>Ihre Systeme</b><span>Postfach, ERP, DATEV, Teams oder eine Excel-Liste.</span></li>
+        <li><b>Ihre Regeln</b><span>Wann Bob selbst handelt, wann er fragt, wer freigibt.</span></li>
+        <li><b>Ihre Sprache</b><span>Ihre Vorlagen, Ihre Formulierungen, Ihr Ton gegenüber Kunden.</span></li>
+      </ol>
+      <ul class="bld-facts"><li>Gehört Ihnen</li><li>Dokumentiert</li><li>Tage, nicht Monate</li></ul>
+      <div class="bld-cta"><p>Welcher Vorgang ist es bei Ihnen?</p><a class="btn arrow" href="index.html#kontakt">Ihren Bob besprechen</a></div>
+    </div>
+    <div class="bld-card" id="bld" aria-live="polite">
+      <div class="bld-top"><span class="bld-t">Bauplan</span><span class="bld-co" id="bld-co"></span></div>
+      <dl class="bld-spec" id="bld-spec"></dl>
+      <div class="bld-foot"><span class="bld-stamp" id="bld-stamp">bereit für den Parallelbetrieb</span><span class="bld-dots" id="bld-dots" role="tablist" aria-label="Beispiele"></span></div>
+    </div>
+  </div>
+  <p class="bld-note">Beispiele. Firmen und Werte sind erfunden.</p>
 </div></section>
 <section id="oberflaeche"><div class="wrap">
   <div class="ui-head">
@@ -233,6 +254,34 @@
 
 (function(){var ui=document.getElementById('ui');if(!ui)return;var chips=ui.querySelectorAll('.ui-chips button'),cnt=document.getElementById('ui-count');
 function sync(){var on=0;[].forEach.call(chips,function(c){var b=c.getAttribute('data-b'),a=c.classList.contains('on');if(a)on++;c.setAttribute('aria-pressed',a?'true':'false');var p=ui.querySelector('.ui-p[data-b="'+b+'"]');if(p)p.hidden=!a;});cnt.textContent=on+' von 7 Bausteinen aktiv';ui.setAttribute('data-n',on);}
-[].forEach.call(chips,function(c){c.addEventListener('click',function(){var n=ui.querySelectorAll('.ui-chips button.on').length;if(c.classList.contains('on')&&n<=1)return;c.classList.toggle('on');sync();});});sync();})();</script>
+[].forEach.call(chips,function(c){c.addEventListener('click',function(){var n=ui.querySelectorAll('.ui-chips button.on').length;if(c.classList.contains('on')&&n<=1)return;c.classList.toggle('on');sync();});});sync();})();
+(function(){
+  var B=[
+    {co:'Hydraulik GmbH · 120 Mitarbeitende',rows:[['Aufgabe','Reklamationen aufnehmen und beantworten'],['Liest','service@ und Kundenportal'],['Daten aus','ERP-Aufträge, Seriennummern-Liste'],['Regeln','Garantie bis 24 Monate selbst prüfen, Kulanz an den Innendienst'],['Freigabe','Innendienst, jede Antwort'],['Schreibt in','Teams-Kanal Service, Notiz im ERP'],['Ziel','Antwort in 2 Stunden statt 2 Tagen']]},
+    {co:'Bauunternehmen · 80 Mitarbeitende',rows:[['Aufgabe','Nachunternehmer-Rechnungen prüfen'],['Liest','rechnung@, PDF und Papier-Scan'],['Daten aus','Aufmaß, Auftragsliste in Excel'],['Regeln','Mengen gegen Aufmaß, Abzug bei Abweichung über 2 %'],['Freigabe','Bauleitung, dann Buchhaltung'],['Schreibt in','DATEV-Export, Liste für die Bauleitung'],['Ziel','Keine Rechnung über Aufmaß bezahlt']]},
+    {co:'Großhandel · 200 Mitarbeitende',rows:[['Aufgabe','Offene Angebote nachfassen'],['Liest','Angebote im ERP, Antworten im Postfach'],['Daten aus','ERP, Kundenhistorie'],['Regeln','Nach 5 Tagen erinnern, ab 10.000 € an den Vertrieb'],['Freigabe','Vertrieb, jede Erinnerung über 10.000 €'],['Schreibt in','Mail-Entwurf, Aufgabe im CRM'],['Ziel','Kein Angebot läuft still aus']]}
+  ];
+  var $=function(id){return document.getElementById(id);};
+  var root=$('bld'); if(!root) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur=0,timer=null,touched=false,run=0;
+  $('bld-dots').innerHTML=B.map(function(b,i){return '<button type="button" role="tab" aria-label="Beispiel '+(i+1)+'" data-i="'+i+'"></button>';}).join('');
+  var dots=$('bld-dots').querySelectorAll('button');
+  function show(i,animate){cur=i;var b=B[i],my=++run;
+    [].forEach.call(dots,function(d,k){d.classList.toggle('on',k===i);d.setAttribute('aria-selected',k===i?'true':'false');});
+    $('bld-co').textContent=b.co;
+    $('bld-spec').innerHTML=b.rows.map(function(r){return '<div class="bld-row"><dt>'+r[0]+'</dt><dd></dd></div>';}).join('');
+    var dd=$('bld-spec').querySelectorAll('dd'),rows=$('bld-spec').querySelectorAll('.bld-row'),st=$('bld-stamp');
+    st.classList.remove('on');
+    if(!animate||reduce){[].forEach.call(dd,function(d,k){d.textContent=b.rows[k][1];rows[k].classList.add('on');});st.classList.add('on');return;}
+    var k=0;(function next(){if(my!==run)return;if(k>=dd.length){st.classList.add('on');return;}
+      var t=b.rows[k][1],n=0,el=dd[k];rows[k].classList.add('on');
+      (function type(){if(my!==run)return;n+=2;el.textContent=t.slice(0,n);if(n<t.length)setTimeout(type,18);else{k++;setTimeout(next,160);}})();})();}
+  function start(){if(timer||touched||reduce)return;timer=setInterval(function(){show((cur+1)%B.length,true);},9000);}
+  function stop(){clearInterval(timer);timer=null;}
+  [].forEach.call(dots,function(d){d.addEventListener('click',function(){touched=true;stop();show(+d.getAttribute('data-i'),true);});});
+  show(0,false);
+  if('IntersectionObserver' in window){var first=true;new IntersectionObserver(function(es){if(es[0].isIntersecting){if(first){first=false;if(!touched)show(0,true);}start();}else stop();},{threshold:.35}).observe(root);}else start();
+})();</script>
 </body>
 </html>
