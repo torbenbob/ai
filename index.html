@@ -7,7 +7,7 @@
 <meta name="description" content="Wir bauen mit Ihrem Team eigene KI-Agenten für Ihre Vorgänge und begleiten sie, bis sie laufen. Für den Mittelstand.">
 <title>Bob · KI-Agenten für Ihr Unternehmen</title>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="site.css?v=202610261425">
+<link rel="stylesheet" href="site.css?v=202610261427">
 </head>
 <body>
 <header class="top">
@@ -111,21 +111,18 @@
 </div></section>
 <section id="vergleich" class="green">
   <div class="wrap">
-    <div class="split">
-      <div><span class="eyebrow">Vergleich</span><h2 style="margin-top:12px">Wettbewerbsfähig bleiben. Auf dem Stand der Technik.</h2></div>
-      <p class="lede">Zwei Betriebe, gleicher Markt. Einer halbiert seine Verwaltungskosten mit Bob. Tragen Sie Ihre Zahlen ein.</p>
-    </div>
+    <div class="sec-head"><span class="eyebrow">Vergleich</span><h2>Wettbewerbsfähig bleiben. Auf dem Stand der Technik.</h2></div>
     <div class="calc">
       <div class="fields">
         <div class="field"><label for="umsatz">Jahresumsatz</label><output id="umsatz_out">10,0 Mio. €</output><input type="range" id="umsatz" min="2" max="100" step="1" value="10"></div>
         <div class="field"><label for="marge">EBITDA-Marge heute</label><output id="marge_out">8 %</output><input type="range" id="marge" min="2" max="20" step="1" value="8"></div>
-        <div class="field"><label for="verwaltung">Verwaltungskosten</label><output id="verwaltung_out">32 % vom Umsatz</output><input type="range" id="verwaltung" min="10" max="45" step="1" value="32"><small>Personal und Sachkosten für Verwaltung, Einkauf, Innendienst, Buchhaltung. Nicht Material und Fertigung.</small></div>
-        <div class="field"><label for="anteil">Anteil, den Bob übernimmt</label><output id="anteil_out">50 %</output><input type="range" id="anteil" min="10" max="70" step="5" value="50"><small>Im eigenen Betrieb haben wir rund die Hälfte dieser Kosten herausgenommen.</small></div>
+        <div class="field"><label for="verwaltung">Verwaltungskosten</label><output id="verwaltung_out">20 % vom Umsatz</output><input type="range" id="verwaltung" min="10" max="45" step="1" value="20"><small>Personal und Sachkosten für Verwaltung, Einkauf, Innendienst, Buchhaltung. Nicht Material und Fertigung.</small></div>
+        <div class="field"><label for="anteil">Anteil, den Bob übernimmt</label><output id="anteil_out">20 %</output><input type="range" id="anteil" min="10" max="70" step="5" value="20"><small>Ein erster Bob übernimmt meist ein Fünftel dieser Kosten. Im eigenen Betrieb sind es inzwischen rund die Hälfte.</small></div>
       </div>
       <div class="result">
         <div class="res a"><span class="who">Betrieb A · ohne Bob</span><span class="val" id="ebitda_a">0,8 Mio. €</span><span class="sub">EBITDA, wie heute.</span></div>
-        <div class="res b"><span class="who">Betrieb B · mit Bob</span><span class="val" id="ebitda_b">2,4 Mio. €</span><span class="sub" id="faktor">Das Dreifache.</span></div>
-        <div class="verdict" id="verdict">Betrieb B kann <b>16 % günstiger</b> anbieten und steht immer noch da, wo A heute steht. Das ist der Moment, in dem A seine Kunden verliert.</div>
+        <div class="res b"><span class="who">Betrieb B · mit Bob</span><span class="val" id="ebitda_b">1,2 Mio. €</span><span class="sub" id="faktor">Das 1,5-Fache.</span></div>
+        <div class="verdict" id="verdict">Betrieb B kann <b>4 % günstiger</b> anbieten und steht immer noch da, wo A heute steht. Das ist der Moment, in dem A seine Kunden verliert.</div>
         <p class="calc-note">Rechenbeispiel mit Ihren Eingaben. Keine Prognose, eine Rechnung. Wer heute automatisiert, bietet morgen günstiger an und bleibt auf dem Stand der Technik.</p>
       </div>
     </div>
@@ -298,7 +295,7 @@ document.querySelectorAll('.cpbtn').forEach(function(btn){btn.addEventListener('
 })();
 </script>
 <script src="three.min.js"></script>
-<script src="hero3d.js?v=202610261425"></script>
+<script src="hero3d.js?v=202610261427"></script>
 
 </body>
 </html>
