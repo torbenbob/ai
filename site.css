@@ -894,7 +894,7 @@ section{border-top:1px solid var(--line)}
 .gl-item{scroll-margin-top:calc(var(--header-h) + 64px)}
 .g-head,.g-row{grid-template-columns:minmax(0,1.35fr) repeat(4,minmax(0,1fr))}
 .gl-item:target h2{display:block;width:max-content;max-width:100%;align-self:start;background:linear-gradient(transparent 62%,var(--line) 62%)}
-.brand{display:inline-flex;align-items:center;min-height:40px}
+.brand{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:40px}
 .brand .tag{font-size:.7rem}
 .top .btn{min-height:40px;box-sizing:border-box}
 .legal a{display:inline-block;padding:11px 0}
