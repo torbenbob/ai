@@ -7,7 +7,7 @@
 <title>Agenten · Bob</title>
 <meta name="description" content="Individuell gebaute KI-Agenten für Ihr Unternehmen. Drei Wirkungsbereiche: Eingang verarbeiten, prüfen und abgleichen, Termine überwachen. Dazu Antworten auf die häufigsten Fragen.">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=202610261236">
 
 </head>
 <body>
@@ -23,6 +23,7 @@
     <a class="btn arrow" href="index.html#kontakt">Gespräch</a>
   </div>
 </header>
+<script>(function(){var h=document.querySelector('header.top');if(!h)return;function f(){document.documentElement.style.setProperty('--header-h',h.offsetHeight+'px');}f();window.addEventListener('resize',f);if('ResizeObserver' in window)new ResizeObserver(f).observe(h);})();</script>
 <main>
 <div class="page-head"><div class="wrap">
   <span class="eyebrow">Agenten</span>
@@ -224,7 +225,7 @@
   function autoStart(){if(auto||touched||reduce)return;auto=setInterval(function(){set((cur+1)%P.length);},4200);}
   function autoStop(){clearInterval(auto);auto=null;}
   function touch(){touched=true;autoStop();}
-  [].forEach.call(tabs,function(b){b.addEventListener('click',function(){touch();set(+b.getAttribute('data-p'));});b.addEventListener('mouseenter',function(){touch();set(+b.getAttribute('data-p'));});});
+  [].forEach.call(tabs,function(b){b.addEventListener('click',function(){touch();set(+b.getAttribute('data-p'));});});
   [].forEach.call(segs,function(g){g.addEventListener('click',function(){touch();set(+g.getAttribute('data-p'));});});
   set(0);
   if('IntersectionObserver' in window){new IntersectionObserver(function(es){if(es[0].isIntersecting){if(!root.classList.contains('drawn')){root.classList.add('drawn');setTimeout(autoStart,2600);}else autoStart();}else autoStop();},{threshold:.3}).observe(root);}else{root.classList.add('drawn');setTimeout(autoStart,2600);}

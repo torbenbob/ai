@@ -109,7 +109,7 @@
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     if (camera.aspect < 0.9) {
-      camera.fov = 48; camBase.set(1.5, 4.6, 19); look.set(3.2, 1.6, 0);
+      camera.fov = 44; camBase.set(1.5, 4.6, 19); look.set(3.2, 0.6, 0);
     } else {
       camera.fov = 34; camBase.set(-2.6, 3.0, 15); look.set(-0.7, 0.2, 0);
     }

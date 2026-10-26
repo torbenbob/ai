@@ -815,3 +815,108 @@ section{border-top:1px solid var(--line)}
 .note:hover h3{text-decoration-color:var(--ink);text-decoration-thickness:1px}
 .page-head h1{font-weight:600;letter-spacing:-.03em}
 .badge .ico{border-radius:var(--radius)}
+
+
+/* Review 26.10.: Mobile-Navigation, Tippziele, Radius, Politur */
+:root{--header-h:79px}
+.brand .tag{font-size:.68rem}
+.ag-copy .pill,.ag-copy .keep b,.dm-h,.ui-h,.g-head span,.ui-k small,.dm-tbl th,.g-row>i em{font-size:.7rem}
+.dm-item .no,.ui-l li span{font-size:.72rem}
+.chip,.dm-item .chip{font-size:.7rem}
+.proc-tabs button{position:relative;padding:6px 0 12px}
+.proc-tabs button.on::after{position:absolute;left:0;right:0;bottom:-19px;height:2px;background:var(--ink)}
+.proc,.ui,.bt,.bt-vis,.ui-win,.ui-p,.dm-item,.dm-draft,.msg p,.ui-q,.vc span,.proc-tag,.ui-chips button,.msg.sys span,.inv-paper{border-radius:var(--radius)}
+.calc-note{font-family:var(--ab-display)!important;font-size:.82rem;letter-spacing:0;line-height:1.45}
+.dm-note,.gl-rel{font-family:var(--ab-display);font-size:.78rem;letter-spacing:0}
+.bt:hover{transform:none;background:#E8E8EA}
+.dm,.mock,.ui-win{box-shadow:none;border:1px solid var(--line)}
+.gl-tools{top:var(--header-h)}
+.gl-item{scroll-margin-top:calc(var(--header-h) + 64px)}
+@media (max-width:860px){
+  .brand .tag{display:none}
+  header.top .wrap{flex-wrap:wrap;padding-block:12px 0;gap:8px 16px}
+  .top .btn{padding:.7em 1.1em}
+  .top nav{display:flex;order:3;flex-basis:100%;gap:22px;font-size:.92rem;padding:0 0 10px;overflow-x:auto;scrollbar-width:none}
+  .top nav::-webkit-scrollbar{display:none}
+  .top nav a{display:inline-flex;align-items:center;min-height:40px;white-space:nowrap}
+  .dm-steps button,.ui-chips button,.cpbtn,.chips a,.proc-tabs button{min-height:40px}
+  .dm-ctrl button{width:40px;height:40px}
+  .more{display:inline-flex;align-items:center;min-height:40px;padding-bottom:0}
+  .legal a{display:inline-block;padding:10px 0}
+  .field input[type=range]{height:32px}
+}
+@media (max-width:760px){
+  .faq .qa{grid-template-columns:1fr;gap:8px}
+  .notes .note,.note{grid-template-columns:1fr;gap:6px;align-items:start;padding:20px 0}
+  .note .more{justify-self:start}
+  .gcol{padding-right:0}
+}
+@media (max-width:720px){
+  .gl-tools{padding-block:8px}
+  .gl-tools .wrap{flex-wrap:nowrap;gap:10px}
+  .gl-az{flex:1;min-width:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .gl-az a{flex:none;width:36px;height:36px}
+  .gl-search{flex:none;width:132px}
+}
+@media (max-width:600px){
+  .hero::after{background:linear-gradient(to top,rgba(14,14,18,.97) 0%,rgba(14,14,18,.7) 45%,rgba(14,14,18,0) 72%)}
+  .dm-bar{flex-wrap:wrap;gap:6px 12px;padding:10px 14px}
+  .dm-brand,.dm-timer{white-space:nowrap}
+  #dm-clock{display:none}
+  .dm-timer{flex-basis:100%;order:5;font-size:.7rem}
+  .dm-wrap .sec-head{order:-3}
+  .dm-wrap .dm-rail{order:-2;position:sticky;top:var(--header-h);z-index:3;background:#fff;padding:10px 0;border-bottom:1px solid var(--line)}
+  .dm-wrap .dm-cap{order:-1;min-height:0}
+  .dm-logl{max-height:6.5em}
+}
+@media (max-width:560px){
+  .proc-svg{display:none}
+  .proc-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 12px;margin-top:0;padding-bottom:10px}
+  .proc-tabs button{flex-direction:row;justify-content:flex-start;gap:8px;font-size:.72rem;letter-spacing:.1em;min-height:40px;padding:0;white-space:nowrap}
+  .proc-tabs button.on::after{bottom:0}
+}
+@media (max-width:520px){
+  .g-head,.g-row{grid-template-columns:minmax(0,1.9fr) repeat(4,minmax(0,1fr))}
+  .g-n{font-size:.76rem;white-space:normal;line-height:1.15}
+  .g-row{height:auto;min-height:38px}
+  .g-row>i{align-self:center}
+  .ag-copy .keep{display:flex;flex-direction:column;gap:4px;align-self:stretch}
+  .ag-copy .keep b{margin:0}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+  .stat{gap:10px;padding-top:16px}
+  .stat .big{font-size:2.4rem}
+  .stat p{font-size:.92rem}
+}
+
+
+/* QA 26.10.: Anker, Hero mobil, Gantt, Glossar, Demo-Leiste, Tippziele */
+.ag,section[id],#kontakt,#demo,#vergleich,#proc{scroll-margin-top:calc(var(--header-h) + 12px)}
+.gl-item{scroll-margin-top:calc(var(--header-h) + 64px)}
+.g-head,.g-row{grid-template-columns:minmax(0,1.35fr) repeat(4,minmax(0,1fr))}
+.gl-item:target h2{display:block;width:max-content;max-width:100%;align-self:start;background:linear-gradient(transparent 62%,var(--line) 62%)}
+.brand{display:inline-flex;align-items:center;min-height:40px}
+.brand .tag{font-size:.7rem}
+.top .btn{min-height:40px;box-sizing:border-box}
+.legal a{display:inline-block;padding:11px 0}
+.gl-search{min-height:40px;box-sizing:border-box}
+.back{display:inline-flex;align-items:center;min-height:40px}
+@media (max-width:860px){
+  .field input[type=range]{height:40px}
+  .contact .val a{display:inline-flex;align-items:center;min-height:40px}
+  .gl-az a{width:40px;height:40px}
+}
+@media (max-width:720px){
+  .gl-tools{position:static;padding-block:12px}
+  .gl-tools .wrap{flex-wrap:wrap;gap:10px}
+  .gl-az{flex-basis:100%;flex-wrap:wrap;overflow:visible}
+  .gl-search{width:100%}
+  .gl-item{scroll-margin-top:calc(var(--header-h) + 12px)}
+}
+@media (max-width:600px){
+  .stage3d{top:0;bottom:auto;height:62%}
+  .dm-wrap .dm-rail{padding:6px 0;gap:6px 10px;flex-wrap:nowrap}
+  .dm-steps{gap:4px;flex-wrap:nowrap}
+  .dm-steps button{font-size:0;padding:0;width:40px;min-height:40px;justify-content:center}
+  .dm-steps button span{font-size:.74rem;font-weight:600}
+  .dm-ctrl #dm-prev,.dm-ctrl #dm-next{display:none}
+}

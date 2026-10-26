@@ -7,7 +7,7 @@
 <meta name="description" content="Wir bauen mit Ihrem Team eigene KI-Agenten für Ihre Vorgänge und begleiten sie, bis sie laufen. Für den Mittelstand.">
 <title>Bob · KI-Agenten für Ihr Unternehmen</title>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=202610261236">
 </head>
 <body>
 <header class="top">
@@ -22,6 +22,7 @@
     <a class="btn arrow" href="index.html#kontakt">Gespräch</a>
   </div>
 </header>
+<script>(function(){var h=document.querySelector('header.top');if(!h)return;function f(){document.documentElement.style.setProperty('--header-h',h.offsetHeight+'px');}f();window.addEventListener('resize',f);if('ResizeObserver' in window)new ResizeObserver(f).observe(h);})();</script>
 <main id="top">
 <div class="hero">
   <div class="stage3d" id="hero3d" aria-hidden="true"></div>
@@ -59,7 +60,7 @@
           <li><b>Läuft neben der Arbeit</b><span>kopieren, einfügen, zurück</span></li>
           <li><b>Nicht angebunden</b><span>kein ERP, kein Postfach</span></li>
           <li><b>Nicht optimiert</b><span>jeder fragt anders</span></li>
-          <li><b>Regulatorisch fragwürdig</b><span>private Konten, kein AV-Vertrag</span></li>
+          <li><b>Regulatorisch fragwürdig</b><span>private Konten, ohne AVV</span></li>
         </ul>
         <p class="bfoot">In fünf Minuten eingerichtet. Im Ablauf ändert sich nichts.</p>
       </div>
@@ -242,8 +243,8 @@ document.querySelectorAll('.cpbtn').forEach(function(btn){btn.addEventListener('
     var d=D[i],read=st.phase>=1||st.free,cmp=st.phase>=2||st.free;
     $('dm-dt').innerHTML=d.no+'<span>'+d.kunde+'</span>';
     var mk=function(k){return k==='ok'?'<span class="mk ok">✓</span>':k==='warn'?'<span class="mk no">!</span>':'<span class="mk esc">?</span>';};
-    $('dm-detail').innerHTML='<table class="dm-tbl dm-q'+(cmp?' cmp':'')+'"><thead><tr><th>Pos</th><th>Kunde schreibt</th><th>Bob findet</th><th>Preis</th><th></th></tr></thead><tbody>'+d.rows.map(function(r,ri){var bad=cmp&&r[4]!=='ok';return '<tr style="--d:'+ri+'" class="'+(bad?(r[4]==='esc'?'esc':'bad'):'')+'"><td>'+r[0]+'</td><td class="v">'+r[1]+'</td><td class="v ab">'+(cmp?r[2]:'…')+'</td><td class="v">'+(cmp?r[3]:'')+'</td><td class="m">'+(cmp?mk(r[4]):'')+'</td></tr>';}).join('')+'</tbody></table>'+(cmp?'<p class="dm-sum">'+d.sum+'</p>':'');}
-    if(read){var tb=$('dm-detail').querySelector('table');requestAnimationFrame(function(){tb.classList.add('read');});}
+    $('dm-detail').innerHTML='<table class="dm-tbl dm-q'+(cmp?' cmp':'')+'"><thead><tr><th>Pos</th><th>Kunde schreibt</th><th>Bob findet</th><th>Preis</th><th></th></tr></thead><tbody>'+d.rows.map(function(r,ri){var bad=cmp&&r[4]!=='ok';return '<tr style="--d:'+ri+'" class="'+(bad?(r[4]==='esc'?'esc':'bad'):'')+'"><td>'+r[0]+'</td><td class="v">'+r[1]+'</td><td class="v ab">'+(cmp?r[2]:'…')+'</td><td class="v">'+(cmp?r[3]:'')+'</td><td class="m">'+(cmp?mk(r[4]):'')+'</td></tr>';}).join('')+'</tbody></table>'+(cmp?'<p class="dm-sum">'+d.sum+'</p>':'');
+    if(read){var tb=$('dm-detail').querySelector('table');requestAnimationFrame(function(){tb.classList.add('read');});}}
   function typeInto(el,text){if(reduce){el.textContent=text;return;}var n=0,step=Math.max(1,Math.ceil(text.length/30));el.textContent='';el.classList.add('typing');(function go(){n+=step;el.textContent=text.slice(0,n);if(n<text.length)setTimeout(go,22);else el.classList.remove('typing');})();}
   function renderBob(){if(st.msgs.length<st.mN)st.mN=st.msgs.length;$('dm-msgs').innerHTML=st.msgs.map(function(m,k){return '<div class="dm-msg'+(k>=st.mN?' new':'')+'"><i>B</i><span>'+m+'</span></div>';}).join('');st.mN=st.msgs.length;[].forEach.call($('dm-msgs').querySelectorAll('.dm-msg.new span'),function(sp,j){var t=sp.textContent;setTimeout(function(){typeInto(sp,t);},j*500);});
     var i=st.sel,box=$('dm-draftbox');
@@ -253,7 +254,7 @@ document.querySelectorAll('.cpbtn').forEach(function(btn){btn.addEventListener('
     else box.innerHTML='';}
   function renderLog(){if(st.log.length<st.lN)st.lN=st.log.length;$('dm-log').innerHTML=st.log.map(function(l,k){return '<li'+(k>=st.lN?' class="new"':'')+'><time>'+l[0]+'</time><span>'+l[1]+'</span></li>';}).join('');st.lN=st.log.length;var el=$('dm-log');el.scrollTop=el.scrollHeight;}
   function allDone(){return D.every(function(d,i){return ['frei','ask','esc'].indexOf(st.status[i])>-1;});}
-  function renderRail(){[].forEach.call(document.querySelectorAll('#dm-steps button'),function(b){var s=+b.getAttribute('data-s');b.className=(s===st.phase&&!st.free?'on':(s<st.phase||st.free?'done':''));});
+  function renderRail(){[].forEach.call(document.querySelectorAll('#dm-steps button'),function(b){var s=+b.getAttribute('data-s');b.className=((s===st.phase&&!st.free)||(st.free&&s===4)?'on':(s<st.phase||st.free?'done':''));});
     var c=CAP[st.phase];$('dm-cap').innerHTML=st.free?(allDone()?'Fertig.<span> Vier Anfragen, drei Angebote raus, eine liegt bei Ihnen. Nichts ohne Ihre Freigabe.</span>':'Jetzt Sie.<span> Klicken Sie links auf eine Anfrage und entscheiden Sie.</span>'):c[0]+'<span>'+c[1]+'</span>';
     $('dm-clock').textContent='Mo '+CLK[Math.min(st.phase,4)];var pg=$('dm-prog');if(pg)pg.style.width=(st.free?100:st.phase*25)+'%';
     $('dm-timer').innerHTML=st.sent>0?'Erstes Angebot raus 07:48 · <b>6 Minuten</b>':'Anfrage eingegangen 07:42';
@@ -297,7 +298,7 @@ document.querySelectorAll('.cpbtn').forEach(function(btn){btn.addEventListener('
 })();
 </script>
 <script src="three.min.js"></script>
-<script src="hero3d.js"></script>
+<script src="hero3d.js?v=202610261236"></script>
 
 </body>
 </html>
