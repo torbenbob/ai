@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Agenten · Bob</title>
-<meta name="description" content="Individuell gebaute KI-Agenten für den Mittelstand. Drei Beispiele aus Einkauf, Buchhaltung und Innendienst, dazu Antworten auf die häufigsten Fragen.">
+<meta name="description" content="Individuell gebaute KI-Agenten für Ihr Unternehmen. Drei Wirkungsbereiche: Eingang verarbeiten, prüfen und abgleichen, Termine überwachen. Dazu Antworten auf die häufigsten Fragen.">
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="site.css">
 
@@ -13,7 +13,7 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark">Bob</span><span class="tag">KI-Agenten für den Mittelstand</span></a>
+    <a class="brand" href="index.html"><span class="mark">Bob</span><span class="tag">KI-Agenten für Ihr Unternehmen</span></a>
     <nav aria-label="Hauptnavigation">
       <a href="index.html">Start</a>
       <a href="agenten.html" class="on" aria-current="page">Agenten</a>
@@ -26,38 +26,39 @@
 <main>
 <div class="page-head"><div class="wrap">
   <span class="eyebrow">Agenten</span>
-  <h1>So kommt Bob in Ihren Betrieb</h1>
-  <p class="lede">Vier Phasen. Die ersten beiden kostenlos, alles zusammen dauert Tage, nicht Monate.</p>
+  <h1>So kommt Bob in Ihr Unternehmen.</h1>
+  <p class="lede">Vier Phasen. Alles zusammen dauert Tage, nicht Monate.</p>
 </div></div>
 <section class="proc-sec" style="border-top:0;padding-top:0"><div class="wrap">
   <div class="proc" id="proc">
-    <svg class="proc-svg" viewBox="0 0 1200 220" role="img" aria-label="Vier Phasen: Erkennen, Testen, Einführen, Begleiten">
+    <svg class="proc-svg" viewBox="0 0 1200 220" role="img" aria-label="Vier Phasen: Erkennen, Analysieren, Implementieren, Begleiten">
       <defs><linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="currentColor" stop-opacity="1"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
       <g class="seg" data-p="0">
         <path pathLength="1" d="M0,22 C140,22 220,82 300,110"/>
         <path pathLength="1" d="M0,64 C150,64 230,96 300,110"/>
         <path pathLength="1" d="M0,156 C150,156 230,124 300,110"/>
         <path pathLength="1" d="M0,198 C140,198 220,138 300,110"/>
-        <path pathLength="1" d="M0,110 L300,110" class="thin"/>
+        <path pathLength="1" d="M0,110 L300,110" class="thin" id="pp0"/>
       </g>
       <g class="seg" data-p="1">
-        <path pathLength="1" d="M300,110 L600,110"/>
+        <path pathLength="1" d="M300,110 L600,110" id="pp1"/>
         <circle class="ico" cx="400" cy="110" r="13"/><path class="glyph" d="M396,103 L405,110 L396,117 Z"/>
         <circle class="ico" cx="510" cy="110" r="13"/><path class="glyph tick" d="M504,110 L508.5,114.5 L516,106"/>
       </g>
       <g class="seg" data-p="2">
-        <path pathLength="1" d="M600,110 Q637.5,84 675,110 T750,110 T825,110 T900,110"/>
+        <path pathLength="1" d="M600,110 Q637.5,84 675,110 T750,110 T825,110 T900,110" id="pp2"/>
         <path pathLength="1" d="M600,110 Q637.5,136 675,110 T750,110 T825,110 T900,110"/>
       </g>
       <g class="seg" data-p="3">
-        <path pathLength="1" d="M900,110 L944,110 L958,74 L972,146 L984,110 L1200,110" stroke="url(#fadeR)"/>
+        <path pathLength="1" d="M900,110 L944,110 L958,74 L972,146 L984,110 L1200,110" stroke="url(#fadeR)" id="pp3"/>
       </g>
       <g class="nodes"><circle cx="300" cy="110" r="6"/><circle cx="600" cy="110" r="6"/><circle cx="900" cy="110" r="6"/></g>
+      <circle class="pulse" r="5"><animateMotion id="pm" dur="3s" repeatCount="indefinite"><mpath href="#pp1"/></animateMotion></circle>
     </svg>
     <div class="proc-tabs" role="tablist">
       <button type="button" role="tab" data-p="0"><span>01</span>Erkennen</button>
-      <button type="button" role="tab" data-p="1"><span>02</span>Testen</button>
-      <button type="button" role="tab" data-p="2"><span>03</span>Einführen</button>
+      <button type="button" role="tab" data-p="1"><span>02</span>Analysieren</button>
+      <button type="button" role="tab" data-p="2"><span>03</span>Implementieren</button>
       <button type="button" role="tab" data-p="3"><span>04</span>Begleiten</button>
     </div>
     <div class="proc-body">
@@ -68,35 +69,32 @@
 </div></section>
 
 <section><div class="wrap">
-<div class="sec-head"><span class="eyebrow">Drei Beispiele</span><h2>Kein Bob gleicht dem anderen</h2><p class="lede">Jeden Bob bauen wir für einen Betrieb: um dessen Vorgang, dessen Systeme und dessen Regeln. Die drei Beispiele zeigen, wie verschieden das aussieht. Entscheiden bleibt immer bei Ihren Leuten.</p></div>
+<div class="sec-head"><span class="eyebrow">Drei Wirkungsbereiche</span><h2>Kein Bob gleicht dem anderen.</h2><p class="lede">Jeden Bob bauen wir für ein Unternehmen: um dessen Vorgänge, Systeme und Regeln. Drei Bereiche, in denen das fast überall wirkt. Entscheiden bleibt immer bei Ihren Leuten.</p></div>
 <div class="ags">
-  <article class="ag" id="einkauf">
+  <article class="ag" id="eingang">
     <div class="ag-copy">
       <div class="tagline"><span class="n">01</span><span class="pill">Häufigster Einstieg</span></div>
-      <h2>Einkauf: Auftragsbestätigungen prüfen</h2>
-      <ul><li>Auftragsbestätigungen gegen Bestellungen prüfen</li><li>Liefertermine verfolgen, Lieferanten nachfassen</li><li>Rückstandsliste jeden Morgen</li></ul>
-      <span class="keep"><b>Bleibt bei Ihnen</b>Jede Mahnung, jede Preisentscheidung</span>
-      <span class="facts">Liest: Einkaufspostfach · Prüft gegen: offene Bestellungen aus dem ERP</span>
+      <h2>Eingang verarbeiten.</h2>
+      <ul><li>Liest, was reinkommt: Anfragen, Bestellungen, Reklamationen, Bewerbungen</li><li>Egal in welcher Form: Mail, PDF, Excel-Liste, Formular</li><li>Ordnet zu, holt die Daten dazu und bereitet die Antwort vor</li></ul>
+      <span class="keep"><b>Bleibt bei Ihnen</b>Jede Zusage, jeder Versand</span>
+      <span class="facts">Quellen: Postfächer, Ordner, Portale · Daten aus: ERP, Preislisten, Stammdaten</span>
+      <a class="more arrow" href="index.html#demo" style="align-self:flex-start">In der Demo ausprobieren</a>
     </div>
-    <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Einkauf</strong><span style="margin-left:auto">Liefertermine KW 45 bis 48</span></div>
-<div class="gantt">
-  <div class="g-head"><span></span><span>KW 45</span><span>KW 46</span><span>KW 47</span><span>KW 48</span></div>
-  <div class="g-row"><span class="g-n">Härterei Nord</span><i class="g-bar ok" style="grid-column:2/3"></i></div>
-  <div class="g-row"><span class="g-n">Stahl Peters</span><i class="g-ghost" style="grid-column:2/3"></i><i class="g-bar bad" style="grid-column:4/5"><em>+12 Tage</em></i></div>
-  <div class="g-row"><span class="g-n">Hydraulik Lenz</span><i class="g-bar ok" style="grid-column:3/4"></i></div>
-  <div class="g-row"><span class="g-n">Guss Meyer</span><i class="g-bar part" style="grid-column:3/4"><em>100 von 120</em></i></div>
-  <div class="g-row"><span class="g-n">Dichtungen Kühn</span><i class="g-bar ok" style="grid-column:2/4"></i></div>
-  <div class="g-legend"><span><i class="g-ghost s"></i>bestellt</span><span><i class="g-bar ok s"></i>bestätigt</span><span><i class="g-bar bad s"></i>verschoben</span></div>
+    <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Vertrieb</strong><span style="margin-left:auto">Anfrage zu Angebot</span></div>
+<div class="chat">
+  <div class="msg in"><span class="who">Ohlsen Maschinenbau · 07:42</span><p>Bitte um Angebot: 50 Flansche DN80 PN16, 200 O-Ringe 32×3, 20 Kugelhähne DN50. Liefertermin KW 47.</p></div>
+  <div class="msg bob"><span class="who">Bob · Entwurf · 07:48</span><p>Angebot über drei Positionen, 2.319,90 € netto inklusive 5 % Rabatt. Flansche und O-Ringe KW 47, Kugelhähne KW 48.</p><span class="att">Angebot_AN-1041.pdf</span></div>
+  <div class="msg sys"><span>6 Minuten · Freigabe durch den Innendienst</span></div>
 </div>
-<div class="mock-foot"><span>Rückfrage an Stahl Peters liegt bereit</span><span class="dm-btn ok">Freigeben</span></div></div></div>
+<div class="mock-foot"><span>Angebot wartet auf Freigabe</span><span class="dm-btn ok">Freigeben und senden</span></div></div></div>
   </article>
-  <article class="ag" id="buchhaltung">
+  <article class="ag" id="pruefen">
     <div class="ag-copy">
       <div class="tagline"><span class="n">02</span><span class="pill">Läuft im eigenen Betrieb</span></div>
-      <h2>Buchhaltung: Rechnungen vor der Buchung prüfen</h2>
-      <ul><li>Eingangsrechnungen gegen Bestellung und Wareneingang prüfen</li><li>Pflichtangaben und Dubletten kontrollieren</li><li>Kontierung vorschlagen, im DATEV-Format</li></ul>
-      <span class="keep"><b>Bleibt bei Ihnen</b>Buchung und Zahlung, bei Ihnen oder Ihrer Kanzlei</span>
-      <span class="facts">Liest: Rechnungspostfach · Prüft gegen: Bestellungen, Wareneingänge</span>
+      <h2>Prüfen und abgleichen.</h2>
+      <ul><li>Dokument gegen Daten: Rechnung gegen Bestellung, Bestätigung gegen Auftrag</li><li>Pflichtangaben, Dubletten, Preise und Mengen kontrollieren</li><li>Jede Abweichung auf einer Liste, mit Vorschlag</li></ul>
+      <span class="keep"><b>Bleibt bei Ihnen</b>Buchung, Zahlung, jede Entscheidung bei Abweichung</span>
+      <span class="facts">Quellen: Rechnungs- und Einkaufspostfach · Abgleich mit: ERP, Wareneingang, DATEV</span>
     </div>
     <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Buchhaltung</strong><span style="margin-left:auto">Rechnung geprüft</span></div>
 <div class="inv">
@@ -118,25 +116,28 @@
 </div>
 <div class="mock-foot"><span>Rückfrage zum Preis vorbereitet</span><span class="dm-btn ok">Prüfen</span></div></div></div>
   </article>
-  <article class="ag" id="innendienst">
+  <article class="ag" id="termine">
     <div class="ag-copy">
       <div class="tagline"><span class="n">03</span></div>
-      <h2>Innendienst: aus Anfragen Angebote machen</h2>
-      <ul><li>Anfragen lesen und Angebote vorbereiten</li><li>Preise aus der Preisliste, Termine aus dem ERP</li><li>Bestellungen erfassen, Rückfragen als Entwurf</li></ul>
-      <span class="keep"><b>Bleibt bei Ihnen</b>Preiszusage, Versand jeder Bestätigung</span>
-      <span class="facts">Liest: Vertriebspostfach · Prüft gegen: Artikelstamm, Kundenpreisliste</span>
-      <a class="more arrow" href="index.html#demo" style="align-self:flex-start">In der Demo ausprobieren</a>
+      <h2>Termine und Zusagen überwachen.</h2>
+      <ul><li>Liefertermine, offene Angebote, Fristen und Rückstände im Blick</li><li>Fasst nach, erinnert, eskaliert nach Ihren Regeln</li><li>Eine Liste jeden Morgen: Was kippt, bevor es kippt</li></ul>
+      <span class="keep"><b>Bleibt bei Ihnen</b>Jede Mahnung, jede Eskalation</span>
+      <span class="facts">Quellen: Bestellungen, Angebote, Kalender · Abgleich mit: ERP, Lieferantenzusagen</span>
     </div>
-    <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Vertrieb</strong><span style="margin-left:auto">Anfrage zu Angebot</span></div>
-<div class="chat">
-  <div class="msg in"><span class="who">Ohlsen Maschinenbau · 07:42</span><p>Bitte um Angebot: 50 Flansche DN80 PN16, 200 O-Ringe 32×3, 20 Kugelhähne DN50. Liefertermin KW 47.</p></div>
-  <div class="msg bob"><span class="who">Bob · Entwurf · 07:48</span><p>Angebot über drei Positionen, 2.319,90 € netto inklusive 5 % Rabatt. Flansche und O-Ringe KW 47, Kugelhähne KW 48.</p><span class="att">Angebot_AN-1041.pdf</span></div>
-  <div class="msg sys"><span>6 Minuten · Freigabe durch den Innendienst</span></div>
+    <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Einkauf</strong><span style="margin-left:auto">Liefertermine KW 45 bis 48</span></div>
+<div class="gantt">
+  <div class="g-head"><span></span><span>KW 45</span><span>KW 46</span><span>KW 47</span><span>KW 48</span></div>
+  <div class="g-row"><span class="g-n">Härterei Nord</span><i class="g-bar ok" style="grid-column:2/3"></i></div>
+  <div class="g-row"><span class="g-n">Stahl Peters</span><i class="g-ghost" style="grid-column:2/3"></i><i class="g-bar bad" style="grid-column:4/5"><em>+12 Tage</em></i></div>
+  <div class="g-row"><span class="g-n">Hydraulik Lenz</span><i class="g-bar ok" style="grid-column:3/4"></i></div>
+  <div class="g-row"><span class="g-n">Guss Meyer</span><i class="g-bar part" style="grid-column:3/4"><em>100 von 120</em></i></div>
+  <div class="g-row"><span class="g-n">Dichtungen Kühn</span><i class="g-bar ok" style="grid-column:2/4"></i></div>
+  <div class="g-legend"><span><i class="g-ghost s"></i>bestellt</span><span><i class="g-bar ok s"></i>bestätigt</span><span><i class="g-bar bad s"></i>verschoben</span></div>
 </div>
-<div class="mock-foot"><span>Angebot wartet auf Freigabe</span><span class="dm-btn ok">Freigeben und senden</span></div></div></div>
+<div class="mock-foot"><span>Rückfrage an Stahl Peters liegt bereit</span><span class="dm-btn ok">Freigeben</span></div></div></div>
   </article>
 </div>
-<div class="roles-cta"><p>Drei Beispiele von vielen. Welcher Vorgang ist es bei Ihnen?</p><a class="btn arrow" href="index.html#kontakt">Erstgespräch anfragen</a></div>
+<div class="roles-cta"><p>Drei Bereiche von vielen. Welcher Vorgang ist es bei Ihnen?</p><a class="btn arrow" href="index.html#kontakt">Erstgespräch anfragen</a></div>
 </div></section>
 <section id="oberflaeche"><div class="wrap">
   <div class="ui-head">
@@ -170,13 +171,13 @@
     </div>
   </div>
   <div class="conn">
-    <div><span class="eyebrow">Anschlüsse</span><h3>Bob arbeitet mit dem, was Sie haben</h3></div>
+    <div><span class="eyebrow">Anschlüsse</span><h3>Bob arbeitet mit dem, was Sie haben.</h3></div>
     <div><ul class="conn-l"><li>Outlook und Exchange</li><li>Gmail</li><li>Microsoft Teams</li><li>DATEV</li><li>SAP Business One</li><li>proALPHA</li><li>abas</li><li>Sage</li><li>Excel und CSV</li><li>SFTP</li><li>REST-API</li></ul><p>Fehlt eine Schnittstelle, bauen wir sie gemeinsam mit Ihnen.</p></div>
   </div>
 </div></section>
 <section id="fragen">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Fragen</span><h2>Was zuerst gefragt wird</h2></div>
+    <div class="sec-head"><span class="eyebrow">Fragen</span><h2>Was zuerst gefragt wird.</h2></div>
     <div class="faq">
       <div class="qa"><h3>Gibt es Bob fertig zu kaufen?</h3><p>Nein. Jeder Bob wird für einen Betrieb gebaut, aus dessen Vorgängen, Systemen und Regeln. Die Beispiele zeigen, was geht, nicht was im Regal steht.</p></div>
       <div class="qa"><h3>Wo liegen unsere Daten?</h3><p>Bei AWS in Frankfurt, Modellaufrufe über Bedrock in der EU, Vertrag nach Art. 28 DSGVO.</p></div>
@@ -185,7 +186,7 @@
       <div class="qa"><h3>Was, wenn Bob falsch liegt?</h3><p>Dann steht es auf einer Liste. Ohne Ihre Freigabe geht nichts raus, wird nichts gebucht, nichts bezahlt.</p></div>
       <div class="qa"><h3>Unser ERP ist alt.</h3><p>Gut. Eine Excel- oder CSV-Datei reicht, keine Schnittstelle. Und wenn es sich lohnt, bauen wir die Anbindung gemeinsam neu.</p></div>
       <div class="qa"><h3>Brauchen wir eine IT-Abteilung?</h3><p>Nein. Wir brauchen einen Dateiexport, ein Postfach und die Fachleute, die den Vorgang heute machen.</p></div>
-      <div class="qa"><h3>Was kostet das?</h3><p>Gespräch und Test sind kostenlos. Für Einführung und Begleitung gilt: Preis auf Anfrage.</p></div>
+      <div class="qa"><h3>Was kostet das?</h3><p>Das hängt vom Vorgang ab: wie oft er anfällt und wie viele Regeln er hat. Preis auf Anfrage, geklärt im ersten Gespräch.</p></div>
       <div class="qa"><h3>Was, wenn Sie ausfallen?</h3><p>Bob gehört Ihnen, Ihr Team hat ihn mitgebaut. Alles ist dokumentiert. Monatlich kündbar.</p></div>
     </div>
   </div>
@@ -202,10 +203,10 @@
 </footer>
 <script>(function(){
   var P=[
-    {h:'Der eine Vorgang, der sich lohnt',t:'Zwanzig Minuten am Telefon. Wir fangen nicht bei der Technik an, sondern bei Ihrer GuV: Wo kostet ein Vorgang Stunden, wo bleibt Umsatz liegen?',rh:'Ein Vorgang, ein Effekt',rt:'Sie wissen danach, wo Bob ansetzt und was er bringen soll, in Stunden oder in Euro.',cta:'Gespräch vereinbaren',tag:'kostenlos · 20 Minuten'},
-    {h:'Bob an Ihren echten Fällen',t:'Sie schicken uns 20 echte Vorgänge. Bob bearbeitet sie in der ersten Woche, und Sie sehen an Ihrem eigenen Material, was er kann. Keine Folien, kein Workshop.',rh:'Ein Ergebnis, das Sie prüfen können',rt:'20 Fälle, Bobs Vorschläge daneben, jede Abweichung markiert.',cta:'Test anfragen',tag:'kostenlos · 1. Woche'},
-    {h:'Gemeinsam mit Ihrem Team',t:'In der zweiten Woche bauen wir Bob mit den Leuten ein, die den Vorgang heute machen. Erst läuft er neben dem bisherigen Ablauf, dann im Alltag.',rh:'Bob im Alltag',rt:'Ihr Team gibt frei, Bob erledigt den Rest. Das dauert Tage, nicht Monate.',cta:'Gespräch vereinbaren',tag:'2. Woche · Preis auf Anfrage'},
-    {h:'Wir bleiben dran',t:'Wir überwachen Bob laufend und testen ihn jeden Tag automatisch. Neue Lieferanten, neue Regeln, ein umbenanntes Postfach: Wir ziehen nach.',rh:'Ein Bericht pro Monat',rt:'Der vereinbarte Effekt gegen das Ergebnis, für die Geschäftsführung.',cta:'Gespräch vereinbaren',tag:'laufend · monatlich kündbar'}
+    {h:'Der eine Vorgang, der sich lohnt.',t:'Zwanzig Minuten am Telefon. Wir fangen nicht bei der Technik an, sondern bei Ihrer GuV: Wo kostet ein Vorgang Stunden, wo bleibt Umsatz liegen?',rh:'Ein Vorgang, ein Effekt.',rt:'Sie wissen danach, wo Bob ansetzt und was er bringen soll, in Stunden oder in Euro.',cta:'Gespräch vereinbaren',tag:'20 Minuten'},
+    {h:'Gemeinsam analysieren.',t:'Wir gehen Ihre Vorgänge mit den Leuten durch, die sie heute machen: Welche übernimmt ein Agent ganz, wo unterstützt er nur? Daraus wählen wir den ersten Fall und testen ihn an echten Vorgängen aus Ihrem Haus.',rh:'Eine Liste, die Sie prüfen können.',rt:'Die Vorgänge, der erwartete Effekt in Stunden oder Euro, und der Fall, mit dem wir anfangen.',cta:'Gespräch vereinbaren',tag:'gemeinsam bei Ihnen'},
+    {h:'Implementieren, mit Ihrem Team.',t:'Wir bauen Bob mit den Leuten ein, die den Vorgang heute machen, und schließen ihn an Ihre Systeme an. Erst läuft er neben dem bisherigen Ablauf, dann im Alltag.',rh:'Bob im Alltag.',rt:'Ihr Team gibt frei, Bob erledigt den Rest. Das dauert Tage, nicht Monate.',cta:'Gespräch vereinbaren',tag:'Preis auf Anfrage'},
+    {h:'Wir bleiben dran.',t:'Wir überwachen Bob laufend und testen ihn jeden Tag automatisch. Neue Lieferanten, neue Regeln, ein umbenanntes Postfach: Wir ziehen nach.',rh:'Ein Bericht pro Monat.',rt:'Der vereinbarte Effekt gegen das Ergebnis, für die Geschäftsführung.',cta:'Gespräch vereinbaren',tag:'laufend · monatlich kündbar'}
   ];
   var root=document.getElementById('proc'); if(!root) return;
   var segs=root.querySelectorAll('.seg'), tabs=root.querySelectorAll('.proc-tabs button');
@@ -215,11 +216,18 @@
     [].forEach.call(tabs,function(b){var on=+b.getAttribute('data-p')===i;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false');});
     var p=P[i];$('proc-h').textContent=p.h;$('proc-t').textContent=p.t;$('proc-rh').textContent=p.rh;$('proc-rt').textContent=p.rt;$('proc-cta').textContent=p.cta;$('proc-tag').textContent=p.tag;
     var body=root.querySelector('.proc-body');body.classList.remove('swap');void body.offsetWidth;body.classList.add('swap');
+    cur=i;
+    var mp=root.querySelector('mpath');if(mp){mp.setAttribute('href','#pp'+i);mp.setAttributeNS('http://www.w3.org/1999/xlink','href','#pp'+i);var am=document.getElementById('pm');if(am&&am.beginElement){try{am.beginElement();}catch(e){}}}
   }
-  [].forEach.call(tabs,function(b){b.addEventListener('click',function(){set(+b.getAttribute('data-p'));});b.addEventListener('mouseenter',function(){set(+b.getAttribute('data-p'));});});
-  [].forEach.call(segs,function(g){g.addEventListener('click',function(){set(+g.getAttribute('data-p'));});});
-  set(1);
-  if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){root.classList.add('drawn');o.disconnect();}},{threshold:.3}).observe(root);}else root.classList.add('drawn');
+  var cur=0,auto=null,touched=false;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function autoStart(){if(auto||touched||reduce)return;auto=setInterval(function(){set((cur+1)%P.length);},4200);}
+  function autoStop(){clearInterval(auto);auto=null;}
+  function touch(){touched=true;autoStop();}
+  [].forEach.call(tabs,function(b){b.addEventListener('click',function(){touch();set(+b.getAttribute('data-p'));});b.addEventListener('mouseenter',function(){touch();set(+b.getAttribute('data-p'));});});
+  [].forEach.call(segs,function(g){g.addEventListener('click',function(){touch();set(+g.getAttribute('data-p'));});});
+  set(0);
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){if(es[0].isIntersecting){if(!root.classList.contains('drawn')){root.classList.add('drawn');setTimeout(autoStart,2600);}else autoStart();}else autoStop();},{threshold:.3}).observe(root);}else{root.classList.add('drawn');setTimeout(autoStart,2600);}
 })();
 
 (function(){var ui=document.getElementById('ui');if(!ui)return;var chips=ui.querySelectorAll('.ui-chips button'),cnt=document.getElementById('ui-count');
