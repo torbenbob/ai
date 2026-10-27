@@ -1142,6 +1142,21 @@ section{border-top:1px solid var(--line)}
 .nf{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
 
 
+/* Aufmacher: Stapel wird zu Liste */
+.h-list{--row:38px;position:absolute;left:0;top:0;width:min(330px,28vw);will-change:transform;transition:opacity .5s}
+.h-list.out{opacity:0}
+.h-list-h{font-family:var(--ab-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid rgba(255,255,255,.25)}
+.h-list-h b{color:#fff;font-weight:500}
+.h-list ol{list-style:none;margin:0;padding:0}
+.h-list li{height:calc(var(--row) - 6px);margin-bottom:6px;display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:center;padding:0 12px 0 10px;background:rgba(255,255,255,.06);border-left:2px solid rgba(255,255,255,.85);font-family:var(--ab-mono);font-size:.76rem;color:rgba(255,255,255,.92);white-space:nowrap;animation:hRowIn .45s cubic-bezier(.2,.8,.2,1) both}
+.h-list li span{overflow:hidden;text-overflow:ellipsis}
+.h-list li i{font-style:normal;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:.66rem;font-weight:700}
+.h-list li.r{background:rgba(204,25,34,.16);border-left-color:#CC1922;color:#FF6A72}
+@keyframes hRowIn{from{opacity:0;transform:translateX(-10px)}}
+@media (max-width:860px){.h-list{width:min(320px,62vw)}}
+@media (max-width:600px){.h-list{--row:32px;width:min(230px,60vw)}.h-list li{font-size:.66rem;gap:7px;padding:0 7px;letter-spacing:-.01em}.h-list li i{width:18px;height:18px}}
+@media (prefers-reduced-motion:reduce){.h-list li{animation:none}}
+
 /* Aufmacher: Bob in Ihren Systemen */
 .hero .stage3d{inset:0!important;height:auto!important}
 .h-labels{position:absolute;inset:0;pointer-events:none;z-index:1}
