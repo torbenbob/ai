@@ -822,6 +822,7 @@ section{border-top:1px solid var(--line)}
 .brand .tag{font-size:.68rem}
 .ag-copy .pill,.ag-copy .keep b,.dm-h,.ui-h,.g-head span,.ui-k small,.dm-tbl th,.g-row>i em{font-size:.7rem}
 .dm-item .no,.ui-l li span{font-size:.72rem}
+.dm-cursor span{font-size:.7rem}
 .chip,.dm-item .chip{font-size:.7rem}
 .proc-tabs button{position:relative;padding:6px 0 12px}
 .proc-tabs button.on::after{position:absolute;left:0;right:0;bottom:-19px;height:2px;background:var(--ink)}
@@ -995,7 +996,7 @@ section{border-top:1px solid var(--line)}
 .db-x span:first-child{text-align:left}.db-x span:last-child{text-align:right}
 .db-tip{position:absolute;left:0;top:0;pointer-events:none;background:var(--ink);color:#fff;border-radius:3px;padding:6px 10px;display:flex;flex-direction:column;gap:1px;white-space:nowrap;opacity:0;transition:opacity .15s}
 .db-tip.on{opacity:1}
-.db-tip span{font-family:var(--ab-mono);font-size:.66rem;color:rgba(255,255,255,.65)}
+.db-tip span{font-family:var(--ab-mono);font-size:.7rem;color:rgba(255,255,255,.65)}
 .db-tip b{font-size:.82rem;font-weight:600}
 .db-svg .gl{stroke:#EDEDEF;stroke-width:1}
 .db-svg .area{fill:rgba(1,2,5,.045);animation:dbFade .9s ease-out both}
@@ -1051,9 +1052,9 @@ section{border-top:1px solid var(--line)}
 @media (max-width:520px){
   .db-kpi{padding:14px}
   .db-kpi .v{font-size:1.35rem}
-  .db-kpi .k{font-size:.66rem;letter-spacing:.06em}
+  .db-kpi .k{font-size:.7rem;letter-spacing:.06em}
   .db-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}
-  .db-x span:nth-child(even):not(:last-child){visibility:hidden}
+  .db-x span:nth-child(even):not(:last-child),.db-x span:nth-last-child(2){visibility:hidden}
   .dbf{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){.db-live i,.db-svg .area,.db-svg .end{animation:none}.db-bl .tr i,.db-nl li{transition:none}}
