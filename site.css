@@ -1142,6 +1142,16 @@ section{border-top:1px solid var(--line)}
 .nf{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
 
 
+/* Startseite: klare Abschnitte durch wechselnde Flächen */
+#lage,#ansatz,#demo,#wirkung,#vergleich,#ablauf,#bobs-teaser,#kontakt{border-top:0;padding-block:clamp(56px,7vw,96px)}
+#ansatz,#wirkung,#ablauf,#kontakt{background:var(--alt)}
+#lage,#demo,#vergleich,#bobs-teaser{background:var(--bg)}
+#vergleich .result{border:1px solid var(--line)}
+#vergleich .res.a,#vergleich .verdict,#vergleich .calc-note{background:var(--alt)!important}
+#ablauf .st::before{background:var(--alt)}
+#ablauf .st.free::before{background:var(--ink)}
+@media (max-width:600px){#demo .dm-wrap .dm-rail{background:var(--bg)}}
+
 /* Handy: Porträt kleiner, Kontaktzeilen ohne Umbruch */
 @media (max-width:600px){
   .team figure{max-width:260px}
