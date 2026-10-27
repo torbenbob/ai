@@ -1142,6 +1142,21 @@ section{border-top:1px solid var(--line)}
 .nf{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
 
 
+/* Aufmacher: Bob in Ihren Systemen */
+.hero .stage3d{inset:0!important;height:auto!important}
+.h-labels{position:absolute;inset:0;pointer-events:none;z-index:1}
+.h-lb{position:absolute;left:0;top:0;font-family:var(--ab-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);white-space:nowrap;transition:color .3s;will-change:transform}
+.h-lb.r{color:#FF4D57}
+.h-log{position:absolute;z-index:2;right:max(clamp(16px,4vw,48px),calc((100vw - 1180px)/2 + clamp(16px,4vw,48px)));bottom:clamp(48px,7vw,96px);list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;width:300px;pointer-events:none}
+.h-log li{display:grid;grid-template-columns:3.4em minmax(0,1fr);gap:8px;font-family:var(--ab-mono);font-size:.74rem;color:rgba(255,255,255,.75);animation:hLogIn .4s ease-out both}
+.h-log li:nth-child(n+2){opacity:.55}.h-log li:nth-child(n+3){opacity:.3}
+.h-log li time{color:rgba(255,255,255,.45)}.h-log li.r span{color:#FF4D57}
+@keyframes hLogIn{from{opacity:0;transform:translateY(6px)}}
+.hero::after{background:linear-gradient(to top,rgba(14,14,18,.96) 0%,rgba(14,14,18,.5) 36%,rgba(14,14,18,0) 66%),linear-gradient(to right,rgba(14,14,18,.75) 0%,rgba(14,14,18,0) 52%)}
+@media (max-width:860px){.h-log{display:none}}
+@media (max-width:600px){.hero::after{background:linear-gradient(to top,rgba(14,14,18,.97) 0%,rgba(14,14,18,.75) 44%,rgba(14,14,18,0) 70%)}}
+@media (prefers-reduced-motion:reduce){.h-log li{animation:none}}
+
 /* Startseite: klare Abschnitte durch wechselnde Flächen */
 #lage,#ansatz,#demo,#wirkung,#vergleich,#ablauf,#bobs-teaser,#kontakt{border-top:0;padding-block:clamp(56px,7vw,96px)}
 #ansatz,#wirkung,#ablauf,#kontakt{background:var(--alt)}
