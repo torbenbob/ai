@@ -3,11 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="canonical" href="https://torbenbob.github.io/ai/agenten.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Bob">
+<meta property="og:title" content="Agenten · Bob">
+<meta property="og:description" content="Individuell gebaute KI-Agenten für Ihr Unternehmen. Drei Wirkungsbereiche: Eingang verarbeiten, prüfen und abgleichen, Termine überwachen. Dazu Antworten auf die häufigsten Fragen.">
+<meta property="og:url" content="https://torbenbob.github.io/ai/agenten.html">
+<meta property="og:image" content="https://torbenbob.github.io/ai/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Agenten · Bob</title>
 <meta name="description" content="Individuell gebaute KI-Agenten für Ihr Unternehmen. Drei Wirkungsbereiche: Eingang verarbeiten, prüfen und abgleichen, Termine überwachen. Dazu Antworten auf die häufigsten Fragen.">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="site.css?v=202610261509">
+<link rel="stylesheet" href="site.css?v=202610270955">
 
 </head>
 <body>
@@ -82,13 +97,13 @@
       <span class="facts">Quellen: Postfächer, Ordner, Portale · Daten aus: ERP, Preislisten, Stammdaten</span>
       <a class="more arrow" href="index.html#demo" style="align-self:flex-start">In der Demo ausprobieren</a>
     </div>
-    <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Vertrieb</strong><span style="margin-left:auto">Anfrage zu Angebot</span></div>
+    <div class="ag-mock"><div class="mock" data-anim="chat" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Vertrieb</strong><span style="margin-left:auto">Anfrage zu Angebot</span></div>
 <div class="chat">
   <div class="msg in"><span class="who">Ohlsen Maschinenbau · 07:42</span><p>Bitte um Angebot: 50 Flansche DN80 PN16, 200 O-Ringe 32×3, 20 Kugelhähne DN50. Liefertermin KW 47.</p></div>
-  <div class="msg bob"><span class="who">Bob · Entwurf · 07:48</span><p>Angebot über drei Positionen, 2.319,90 € netto inklusive 5 % Rabatt. Flansche und O-Ringe KW 47, Kugelhähne KW 48.</p><span class="att">Angebot_AN-1041.pdf</span></div>
+  <div class="msg bob"><span class="who">Bob · Entwurf · 07:48</span><p><span class="dots"><i></i><i></i><i></i></span>Angebot über drei Positionen, 2.319,90 € netto inklusive 5 % Rabatt. Flansche und O-Ringe KW 47, Kugelhähne KW 48.</p><span class="att">Angebot_AN-1041.pdf</span></div>
   <div class="msg sys"><span>6 Minuten · Freigabe durch den Innendienst</span></div>
 </div>
-<div class="mock-foot"><span>Angebot wartet auf Freigabe</span><span class="dm-btn ok">Freigeben und senden</span></div></div></div>
+<div class="mock-foot"><span><span class="ph0">Bob liest die Anfrage …</span><span class="ph1">Angebot wartet auf Freigabe</span></span><span class="dm-btn ok">Freigeben und senden</span></div></div></div>
   </article>
   <article class="ag" id="pruefen">
     <div class="ag-copy">
@@ -98,9 +113,9 @@
       <span class="keep"><b>Bleibt bei Ihnen</b>Buchung, Zahlung, jede Entscheidung bei Abweichung</span>
       <span class="facts">Quellen: Rechnungs- und Einkaufspostfach · Abgleich mit: ERP, Wareneingang, DATEV</span>
     </div>
-    <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Buchhaltung</strong><span style="margin-left:auto">Rechnung geprüft</span></div>
+    <div class="ag-mock"><div class="mock" data-anim="inv" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Buchhaltung</strong><span style="margin-left:auto"><span class="ph0">Rechnung wird geprüft</span><span class="ph1">Rechnung geprüft</span></span></div>
 <div class="inv">
-  <div class="inv-paper">
+  <div class="inv-paper"><i class="scan"></i>
     <div class="inv-top"><b>Dichtungen Kühn GmbH</b><span>Rechnung RE 4471 · 22.10.2026</span></div>
     <div class="inv-line"><span>O-Ring 32×3 NBR · 2.000 Stk</span><span class="hl">2,49 €</span><span>4.980,00 €</span></div>
     <div class="inv-line"><span>Bestellung 4500-2223</span><span></span><span></span></div>
@@ -116,7 +131,7 @@
     <li class="info">Konto 3400 · 19 % Vorsteuer</li>
   </ul>
 </div>
-<div class="mock-foot"><span>Rückfrage zum Preis vorbereitet</span><span class="dm-btn ok">Prüfen</span></div></div></div>
+<div class="mock-foot"><span><span class="ph0">Bob liest RE 4471 …</span><span class="ph1">Rückfrage zum Preis vorbereitet</span></span><span class="dm-btn ok">Prüfen</span></div></div></div>
   </article>
   <article class="ag" id="termine">
     <div class="ag-copy">
@@ -126,17 +141,17 @@
       <span class="keep"><b>Bleibt bei Ihnen</b>Jede Mahnung, jede Eskalation</span>
       <span class="facts">Quellen: Bestellungen, Angebote, Kalender · Abgleich mit: ERP, Lieferantenzusagen</span>
     </div>
-    <div class="ag-mock"><div class="mock" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Einkauf</strong><span style="margin-left:auto">Liefertermine KW 45 bis 48</span></div>
+    <div class="ag-mock"><div class="mock" data-anim="gantt" aria-hidden="true"><div class="mock-bar"><b></b><strong>Bob · Einkauf</strong><span style="margin-left:auto">Liefertermine KW 45 bis 48</span></div>
 <div class="gantt">
   <div class="g-head"><span></span><span>KW 45</span><span>KW 46</span><span>KW 47</span><span>KW 48</span></div>
   <div class="g-row"><span class="g-n">Härterei Nord</span><i class="g-bar ok" style="grid-column:2/3"></i></div>
-  <div class="g-row"><span class="g-n">Stahl Peters</span><i class="g-ghost" style="grid-column:2/3"></i><i class="g-bar bad" style="grid-column:4/5"><em>+12 Tage</em></i></div>
+  <div class="g-row"><span class="g-n">Stahl Peters</span><i class="g-ghost" style="grid-column:2/3"></i><i class="g-bar bad mv" style="grid-column:4/5"><em>+12 Tage</em></i></div>
   <div class="g-row"><span class="g-n">Hydraulik Lenz</span><i class="g-bar ok" style="grid-column:3/4"></i></div>
   <div class="g-row"><span class="g-n">Guss Meyer</span><i class="g-bar part" style="grid-column:3/4"><em>100 von 120</em></i></div>
   <div class="g-row"><span class="g-n">Dichtungen Kühn</span><i class="g-bar ok" style="grid-column:2/4"></i></div>
   <div class="g-legend"><span><i class="g-ghost s"></i>bestellt</span><span><i class="g-bar ok s"></i>bestätigt</span><span><i class="g-bar bad s"></i>verschoben</span></div>
 </div>
-<div class="mock-foot"><span>Rückfrage an Stahl Peters liegt bereit</span><span class="dm-btn ok">Freigeben</span></div></div></div>
+<div class="mock-foot"><span><span class="ph0">Bob gleicht 5 Auftragsbestätigungen ab …</span><span class="ph1">Rückfrage an Stahl Peters liegt bereit</span></span><span class="dm-btn ok">Freigeben</span></div></div></div>
   </article>
 </div>
 </div></section>
@@ -219,8 +234,8 @@
 <footer>
   <div class="wrap">
     <div class="legal">
-      <span>ai-bob.de · Gebaut in Hamburg · 2026 · Torben Riemer</span>
-      <span><a href="glossar.html">KI-Glossar</a> &nbsp; <a href="index.html#impressum">Impressum</a> &nbsp; <a href="index.html#datenschutz">Datenschutz</a></span>
+      <span>Bob · Gebaut in Hamburg · 2026 · Torben Riemer</span>
+      <span><a href="glossar.html">KI-Glossar</a> &nbsp; <a href="impressum.html">Impressum</a> &nbsp; <a href="datenschutz.html">Datenschutz</a></span>
     </div>
   </div>
 </footer>
@@ -283,6 +298,30 @@ function sync(){var on=0;[].forEach.call(chips,function(c){var b=c.getAttribute(
   [].forEach.call(dots,function(d){d.addEventListener('click',function(){touched=true;stop();show(+d.getAttribute('data-i'),true);});});
   show(0,false);
   if('IntersectionObserver' in window){var first=true;new IntersectionObserver(function(es){if(es[0].isIntersecting){if(first){first=false;if(!touched)show(0,true);}start();}else stop();},{threshold:.35}).observe(root);}else start();
+})();
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var T={gantt:[[300,'s1'],[900,'s2'],[2700,'s3'],[3700,'fin'],[8200,'end']],
+         inv:[[300,'s1'],[600,'s2'],[3000,'s3'],[3600,'fin'],[8600,'end']],
+         chat:[[300,'s1'],[1300,'s2'],[3000,'s3'],[3600,'s4'],[4200,'s5'],[4600,'fin'],[9200,'end']]};
+  var ALL=['s1','s2','s3','s4','s5','fin','out'];
+  [].forEach.call(document.querySelectorAll('.mock[data-anim]'),function(m){
+    var tl=T[m.getAttribute('data-anim')]; if(!tl||reduce) return;
+    [].forEach.call(m.querySelectorAll('.g-row>.g-bar,.inv-checks li'),function(e,i){e.style.setProperty('--i',i);});
+    var timers=[],on=false;
+    function clear(){timers.forEach(clearTimeout);timers=[];}
+    function reset(){m.classList.add('rs');ALL.forEach(function(c){m.classList.remove(c);});void m.offsetWidth;m.classList.remove('rs');}
+    function cycle(){clear();reset();
+      tl.forEach(function(st){timers.push(setTimeout(function(){
+        if(st[1]==='end'){m.classList.add('out');timers.push(setTimeout(function(){if(on)cycle();},450));}
+        else m.classList.add(st[1]);},st[0]));});}
+    m.classList.add('anim');
+    function vis(){var r=m.getBoundingClientRect();return r.bottom>0&&r.top<(window.innerHeight||document.documentElement.clientHeight);}
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!on){on=true;cycle();}else if(!v&&on){on=false;clear();}},{threshold:.4}).observe(m);}
+    else{on=true;cycle();}
+    function chk(){if(vis()&&!on){on=true;cycle();}}
+    chk();window.addEventListener('load',chk);window.addEventListener('scroll',chk,{passive:true});
+  });
 })();</script>
 </body>
 </html>

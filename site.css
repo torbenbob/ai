@@ -1057,3 +1057,85 @@ section{border-top:1px solid var(--line)}
   .dbf{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){.db-live i,.db-svg .area,.db-svg .end{animation:none}.db-bl .tr i,.db-nl li{transition:none}}
+
+
+/* Beispiel-Agenten in Bewegung */
+.mock .ph0{display:none}
+.mock.anim:not(.fin) .ph0{display:inline}
+.mock.anim:not(.fin) .ph1{display:none}
+.mock.rs *,.mock.rs *::before,.mock.rs *::after{transition:none!important;animation:none!important}
+.mock.anim .gantt,.mock.anim .inv,.mock.anim .chat{transition:opacity .4s}
+.mock.anim.out .gantt,.mock.anim.out .inv,.mock.anim.out .chat{opacity:0}
+.mock.anim.fin .mock-foot .dm-btn{animation:mkPulse 1.3s ease-out 2}
+@keyframes mkPulse{0%{box-shadow:0 0 0 0 rgba(1,2,5,.35)}100%{box-shadow:0 0 0 10px rgba(1,2,5,0)}}
+/* Termine */
+.mock.anim .g-row>.g-ghost{opacity:0;transition:opacity .4s}
+.mock.anim.s1 .g-row>.g-ghost{opacity:1}
+.mock.anim .g-row>.g-bar{transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.2,.8,.2,1),background-color .4s;transition-delay:calc(var(--i,0)*.22s)}
+.mock.anim.s2 .g-row>.g-bar{transform:none}
+.mock.anim .g-bar.mv{transform:translateX(calc(-200% - 24px)) scaleX(0);background:var(--ink)}
+.mock.anim.s2 .g-bar.mv{transform:translateX(calc(-200% - 24px))}
+.mock.anim.s3 .g-bar.mv{transform:none;background:var(--warn);transition:transform .9s cubic-bezier(.6,0,.2,1),background-color .4s .5s}
+.mock.anim .g-row>i em{opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s}
+.mock.anim.s2 .g-bar.part em{opacity:1;transform:none;transition-delay:1.2s}
+.mock.anim.s3 .g-bar.mv em{opacity:1;transform:none;transition-delay:.9s}
+/* Abgleich */
+.inv-paper{position:relative;overflow:hidden}
+.inv-paper .scan{display:none}
+.mock.anim .inv-paper .scan{display:block;position:absolute;left:0;right:0;top:0;height:2px;background:var(--ink);opacity:0;pointer-events:none}
+.mock.anim.s1 .inv-paper .scan{animation:mkScan 2.4s linear forwards}
+@keyframes mkScan{0%{top:0;opacity:.55}90%{opacity:.55}100%{top:100%;opacity:0}}
+.mock.anim .inv-checks li{opacity:0;transform:translateX(-6px);transition:opacity .35s,transform .35s;transition-delay:calc(var(--i,0)*.45s)}
+.mock.anim.s2 .inv-checks li{opacity:1;transform:none}
+.mock.anim.s2 .inv-checks li::before{animation:dmPop .45s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*.45s)}
+.mock.anim .inv-line .hl{transition:background-color .35s,color .35s}
+.mock.anim:not(.s3) .inv-line .hl{background:transparent;color:inherit;font-weight:inherit}
+/* Eingang */
+.msg .dots{display:none}
+.mock.anim .chat .msg{opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+.mock.anim.s1 .chat .msg.in{opacity:1;transform:none}
+.mock.anim.s2 .chat .msg.bob{opacity:1;transform:none}
+.mock.anim.s2:not(.s3) .chat .msg.bob p{color:transparent;position:relative}
+.mock.anim.s2:not(.s3) .chat .msg.bob .dots{display:flex;position:absolute;left:14px;top:50%;transform:translateY(-50%);gap:5px}
+.msg .dots i{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.35;animation:mkDot 1s infinite}
+.msg .dots i:nth-child(2){animation-delay:.15s}.msg .dots i:nth-child(3){animation-delay:.3s}
+@keyframes mkDot{30%{opacity:1;transform:translateY(-2px)}}
+.mock.anim .chat .att{opacity:0;transform:scale(.9);transition:opacity .3s,transform .3s}
+.mock.anim.s4 .chat .att{opacity:1;transform:none}
+.mock.anim.s5 .chat .msg.sys{opacity:1;transform:none}
+/* Karten auf der Startseite */
+.vc .b1{animation:tcB1 7s infinite}
+.vc .b2{animation:tcB2 7s infinite}
+.vc .b3{animation:tcB3 7s infinite}
+@keyframes tcB1{0%{opacity:0;transform:translateY(6px)}8%,88%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes tcB2{0%,28%{opacity:0;transform:translateY(6px)}36%,88%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes tcB3{0%,46%{opacity:0;transform:scale(.85)}54%,88%{opacity:1;transform:none}100%{opacity:0}}
+.vd .pp{position:relative;overflow:hidden}
+.vd .pp::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--ink);opacity:0;animation:tdScan 7s linear infinite}
+@keyframes tdScan{0%{top:0;opacity:0}4%{opacity:.5}40%{top:100%;opacity:.5}42%,100%{top:100%;opacity:0}}
+.vd li{animation:tdChk 7s infinite both}
+.vd li:nth-child(2){animation-delay:.5s}.vd li:nth-child(3){animation-delay:1s}.vd li:nth-child(4){animation-delay:1.5s}
+@keyframes tdChk{0%,6%{opacity:0;transform:scale(.4)}12%,84%{opacity:1;transform:none}94%,100%{opacity:0;transform:none}}
+.vd .pp i.r{animation:tdRed 7s infinite}
+@keyframes tdRed{0%,22%{background:var(--line)}28%,88%{background:#F3C9CE}100%{background:var(--line)}}
+.vg i{transform-origin:left center;animation:tgGrow 7s infinite both}
+.vg i:nth-child(3){animation-delay:.3s}.vg i:nth-child(4){animation-delay:.6s}
+@keyframes tgGrow{0%{transform:scaleX(0)}12%,86%{transform:scaleX(1);opacity:1}96%,100%{transform:scaleX(1);opacity:0}}
+.vg i.gh{animation:tgFade 7s infinite both}
+@keyframes tgFade{0%{opacity:0}8%,86%{opacity:1}96%,100%{opacity:0}}
+.vg i.bad{animation:tgMove 7s infinite both}
+@keyframes tgMove{0%,14%{left:10%;background:var(--ink);opacity:0}20%{left:10%;background:var(--ink);opacity:1}42%{left:58%;background:var(--warn);opacity:1}86%{left:58%;background:var(--warn);opacity:1}96%,100%{left:58%;opacity:0}}
+@media (prefers-reduced-motion:reduce){.vc span,.vd li,.vd .pp i.r,.vd .pp::after,.vg i{animation:none!important}}
+
+
+/* Rechtstexte */
+.lg>*{max-width:760px}
+.lg h2{font-size:clamp(1.3rem,2.2vw,1.6rem);margin-top:clamp(36px,5vw,52px)}
+.lg h2:first-child{margin-top:0}
+.lg h3{font-size:1.05rem;margin-top:24px}
+.lg p,.lg li{color:var(--ink-2);line-height:1.6;margin-top:10px}
+.lg ul{padding-left:1.2em}
+.lg address{font-style:normal;color:var(--ink);line-height:1.6;margin-top:10px}
+.lg a{color:var(--ink);text-underline-offset:3px}
+.lg .stand{margin-top:40px;font-size:.86rem;color:var(--muted)}
+.nf{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
